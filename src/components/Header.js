@@ -1,7 +1,9 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { NavLink } from 'react-router-dom';
 
 function Header() {
+    const [showMenu, setShowMenu] = useState(false);
+
     return (
         <header>
             <nav>
@@ -12,7 +14,11 @@ function Header() {
                     <h1>Uji Creative</h1>
                 </div>
                 
-                <ul className="nav-links">
+                <div className={`menu-toggle ${showMenu ? 'active' : ''}`} onClick={() => setShowMenu(!showMenu)}>
+                    <div className="hamburger"></div>
+                </div>
+                
+                <ul className={`nav-links ${showMenu ? 'active' : ''}`}>
                     <li>
                         <NavLink to="/shop">Shop</NavLink>
                         <ul className="dropdown">

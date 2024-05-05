@@ -189,6 +189,8 @@ ul li:hover ul.dropdown{
     z-index: 999;
 }
 
+
+
 .carousel{
     position: relative;
 }
@@ -508,4 +510,112 @@ img.cart-item-image{
     font-weight: 500;
     border-bottom: 1.25px solid #242325;
     padding: 10px 0;
+}
+
+@media screen and (max-width: 768px) {
+    .nav-links {
+        display: none;
+    }
+
+    .menu-toggle {
+        display: block;
+        cursor: pointer;
+    }
+
+    .hamburger {
+        width: 25px;
+        height: 3px;
+        background-color: #5ACC17;
+        position: relative;
+        transition: transform 0.4s;
+    }
+
+    .hamburger::before,
+    .hamburger::after {
+        content: '';
+        position: absolute;
+        width: 25px;
+        height: 3px;
+        background-color: #5ACC17;
+        transition: transform 0.4s;
+    }
+
+    .hamburger::before {
+        top: -8px;
+    }
+
+    .hamburger::after {
+        top: 8px;
+    }
+
+    .menu-toggle.active .hamburger {
+        transform: rotate(45deg);
+    }
+
+    .menu-toggle.active .hamburger::before {
+        transform: translateY(8px) rotate(90deg);
+    }
+
+    .menu-toggle.active .hamburger::after {
+        transform: translateY(-8px) rotate(90deg);
+    }
+
+    .nav-links.active {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 80px; /* Adjust as needed */
+        left: 0;
+        width: 100%;
+        background-color: #242325;
+        z-index: 999;
+    }
+
+    .nav-links.active li {
+        padding: 10px;
+    }
+}
+
+
+
+@media screen and (max-width: 452px){
+    .categories{
+        display: block;
+    }
+    
+    .product{
+        display: block;
+        
+    }
+    
+    .container{
+        padding: 0;
+        display: block;
+    }
+
+    .shop-header-container{
+        padding: 1rem;
+    }
+
+    .categories a{
+        text-align: center;
+        align-items: center;
+    }
+    
+
+    .product img {
+        width: 15rem;
+        height: 15rem;
+        object-fit: cover;
+    }
+    .product{
+    width: 15rem; /* Adjust as needed */
+   
+    }
+
+    .carousel__text{
+        margin: 2rem;
+    }
+
+    
 }
