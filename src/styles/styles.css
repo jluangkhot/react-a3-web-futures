@@ -189,40 +189,34 @@ ul li:hover ul.dropdown{
     z-index: 999;
 }
 
-.carousel{
+/* Carousel.css */
+
+.carousel {
     position: relative;
 }
 
-.carousel__item{
+.carousel__items {
+    display: flex; /* Ensures items are displayed in a row */
+}
+
+.carousel__item {
     height: 50rem;
+    background: grey;
     color: white;
     display: none;
-    justify-content: center;
-    
-
 }
 
-.carousel__item h2{
-    font-size: 3rem;
-    font-weight: 200;
-}
-
-.carousel__item h3{
-    font-size: 1rem;
-    font-weight: 100;
-}
-.carousel__item--selected{
+.carousel__item--selected {
     display: block;
 }
 
-.carousel__nav{
+.carousel__nav {
     width: 100%;
     padding: 20px 0;
     position: absolute;
     bottom: 0;
     left: 0;
     text-align: center;
-    
 }
 
 .carousel__button {
@@ -233,33 +227,26 @@ ul li:hover ul.dropdown{
     border-radius: 50%;
     margin: 0 5px;
     cursor: pointer;
-
 }
 
 .carousel__button--selected {
-    background:  rgba(255, 255, 255, 0.7);
-    
+    background: rgba(255, 255, 255, 0.7);
 }
 
-.carousel__item img{
+.carousel__item img {
+    width:100%;
     height: 50rem;
-    width: 100%;
     object-fit: cover;
-    background: rgba(0, 0, 0, 0.5);
 }
 
-
-.carousel__text{
+.carousel__text {
     margin-left: 5rem;
     margin-top: 12rem;
     display: inline-block;
-    
     position: absolute;
 }
 
-
-
-.carousel__text a{
+.carousel__text a {
     text-decoration: none;
     border: 3px solid #fff;
     background-color: rgba(255, 255, 255, 0.3);
@@ -273,17 +260,20 @@ ul li:hover ul.dropdown{
     top: 2.5rem;
 }
 
-.carousel__text a:hover{
+.carousel__text a:hover {
     background-color: #5ACC17;
 }
 
 .carousel__text h2 {
+    font-size: 2rem;
     padding: 1rem 0;
 }
+
 
 .container {
     display: flex;
     justify-content: space-between;
+    justify-content: center;
     max-width: 100%;
     margin: 0 auto;
     padding: 5rem;
@@ -293,6 +283,7 @@ ul li:hover ul.dropdown{
     display: flex;
     flex-wrap: wrap;
     margin:auto;
+    justify-content: center;
 }
 
 .product {
@@ -510,3 +501,5 @@ img.cart-item-image{
     border-bottom: 1.25px solid #242325;
     padding: 10px 0;
 }
+
+  

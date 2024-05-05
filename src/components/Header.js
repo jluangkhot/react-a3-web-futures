@@ -1,16 +1,18 @@
-import React from 'react';
-import './style.css';
-function Header() {
+import { Link, NavLink } from "react-router-dom";
+
+export default function Header() {
     return (
         <header>
             <nav>
                 <div className="logo">
-                    <a href="index.html"><img src="/uji.png" id="uji-logo" alt="Logo" /></a>
+                    <Link to="/home">
+                        <img src="/uji.png" id="uji-logo" alt="Logo"/>
+                    </Link>
                     <h1>Uji Creative</h1>
                 </div>
                 
                 <ul className="nav-links">
-                    <li><a href="shop.html?category=all">Shop</a>
+                    <li><NavLink to="/shop">Shop</NavLink>
                         <ul className="dropdown">
                             <li><a href="shop.html?category=matcha">Matcha Series</a></li>
                             <li><a href="shop.html?category=hojicha">Hojicha Series</a></li>
@@ -35,4 +37,4 @@ function Header() {
     );
 }
 
-export default Header;
+

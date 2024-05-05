@@ -1,19 +1,17 @@
-import React from 'react'
-import Header from './Header'
-import './style.css'
+import React from 'react';
+import '../styles/styles.css'
+import Carousel from './carousel';
 
 const Home = () => {
   return (
     <div>
-      <Header/>
-
-      
+      <Carousel/>
     </div>
   )
 }
 
-
-
-
-
 export default Home
+
+
+
+
