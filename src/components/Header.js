@@ -1,26 +1,28 @@
-import { Link, NavLink } from "react-router-dom";
+import React from 'react';
+import { NavLink } from 'react-router-dom';
 
-export default function Header() {
+function Header() {
     return (
         <header>
             <nav>
                 <div className="logo">
-                    <Link to="/home">
+                    <NavLink to="/home">
                         <img src="/uji.png" id="uji-logo" alt="Logo"/>
-                    </Link>
+                    </NavLink>
                     <h1>Uji Creative</h1>
                 </div>
                 
                 <ul className="nav-links">
-                    <li><NavLink to="/shop">Shop</NavLink>
+                    <li>
+                        <NavLink to="/shop">Shop</NavLink>
                         <ul className="dropdown">
-                            <li><a href="shop.html?category=matcha">Matcha Series</a></li>
-                            <li><a href="shop.html?category=hojicha">Hojicha Series</a></li>
-                            <li><a href="shop.html?category=tea-accessories">Tea Accessories</a></li>
+                            <li><NavLink to="/shop?category=matcha">Matcha Series</NavLink></li>
+                            <li><NavLink to="/shop?category=hojicha">Hojicha Series</NavLink></li>
+                            <li><NavLink to="/shop?category=tea-accessories">Tea Accessories</NavLink></li>
                         </ul>
                     </li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="contact.html">Contact</a></li>
+                    <li><NavLink to="/about">About</NavLink></li>
+                    <li><NavLink to="/contact">Contact</NavLink></li>
                 </ul>
                 
                 <div className="box">
@@ -29,12 +31,12 @@ export default function Header() {
                         <img src="/search.svg" alt="Search Icon" />
                     </a>
                 </div>
-                <a href="#cart" className="cart-icon">
+                <NavLink to="/cart" className="cart-icon">
                     <img src="/cart.svg" alt="Shopping Cart" />
-                </a>
+                </NavLink>
             </nav>
         </header>
     );
 }
 
-
+export default Header;

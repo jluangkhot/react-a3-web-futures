@@ -2,7 +2,7 @@
 
 import React, { useState } from 'react';
 import '../styles/styles.css'; // Make sure to import your CSS file
-
+import { NavLink, Link } from 'react-router-dom';
 const Carousel = () => {
     const [selectedItem, setSelectedItem] = useState(0);
 
@@ -18,7 +18,7 @@ const Carousel = () => {
                     <div className="carousel__text">
                         <h2>Our Matcha Series</h2>
                         <h3>Explore our exquisite range of matcha, curated to elevate your tea experience with unparalleled flavor and quality.</h3>
-                        <a href="shop.html?category=matcha" onClick={(e) => { e.preventDefault(); handleItemClick(0); }}>Shop</a>
+                        <Link to="/shop?category=matcha" >Shop</Link>
                     </div>
                     <img src="/matcha-co-pC16vUGYCL4-unsplash.jpg" alt="matcha" />
                 </div>
